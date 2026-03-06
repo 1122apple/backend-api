@@ -7,7 +7,6 @@ const router = express.Router();
 const { register, login, getMe } = require('../controllers/authController');
 const { authenticate } = require('../middleware/auth');
 const { validateRegister, validateLogin } = require('../utils/validator');
-
 // 注册
 router.post('/register', validateRegister, register);
 
