@@ -39,7 +39,7 @@ app.use(compression()); // 压缩响应
 // ========== 关键修改1：修复CORS配置 ==========
 // 允许所有域名访问（适配GitHub Pages），同时保留credentials
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || '*', // 优先读环境变量，默认允许所有
+  origin: process.env.CORS_ORIGIN || 'https://1122apple.github.io', 
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // 显式允许所有常用方法
   allowedHeaders: ['Content-Type', 'Authorization'] // 允许必要请求头
